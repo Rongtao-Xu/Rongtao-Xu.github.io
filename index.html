@@ -7,10 +7,54 @@
     />
     <title>Rongtao Xu</title>
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
+    <style>
+      .lang-cn { display: none; }
+      .lang-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+      }
+      /* .lang-toggle button {
+        margin: 0 4px;
+        padding: 4px 8px;
+        cursor: pointer;
+      }
+      .active-lang {
+        font-weight: bold;
+        color: #49bf9d;
+        border-bottom: 1px solid #49bf9d;
+      } */
+      .lang-toggle button {
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        background-color: white;
+        color: #333;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .lang-toggle button:hover {
+        background-color: #f0f0f0;
+      }
+
+      .lang-toggle .active-lang {
+        border: 1px solid #49bf9d;
+        color: #49bf9d;
+        background-color: #e6f7f3;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
+    <div class="lang-toggle">
+      <button id="btn-en" onclick="switchLang('en')" class="active-lang">English</button>
+      <button id="btn-cn" onclick="switchLang('cn')">中文</button>
+    </div>
     <div class="main">
-      <div class="main-head">
+      <div class="main-head lang-en">
         <div class="head-pc">
           <div class="name">Rongtao Xu</div>
           <div class="list">
@@ -18,14 +62,17 @@
             <div class="list-item">
               <a href="#publications">Publications</a>
             </div>
-            <div class="list-item"><a href="#awards">Awards</a></div>
-            <div class="list-item"><a href="#teaching">Teaching</a></div>
+            <div class="list-item"><a href="#awards">Achievements</a></div>
+            <div class="list-item"><a href="#teaching">Education</a></div>
             <div class="list-item">
               <a href="#professional">Professional Service</a>
             </div>
             <div class="list-item">
-              <a href="#opportunities">Opportunities</a>
+              <a href="#opportunities">Internship</a>
             </div>
+            <!-- <div class="list-item">
+              <a href="#positions">Positions</a>
+            </div> -->
           </div>
 
           <div class="menu">
@@ -57,103 +104,141 @@
           </svg>
         </div>
       </div>
+      <div class="main-head lang-cn">
+        <div class="head-pc">
+          <div class="name">许镕涛</div>
+          <div class="list">
+            <div class="list-item"><a href="#news">新闻</a></div>
+            <div class="list-item">
+              <a href="#publications">出版物</a>
+            </div>
+            <div class="list-item"><a href="#awards">成就</a></div>
+            <div class="list-item"><a href="#teaching">教育经历</a></div>
+            <div class="list-item">
+              <a href="#professional">学术服务</a>
+            </div>
+            <div class="list-item">
+              <a href="#opportunities">实习</a>
+            </div>
+          </div>
+
+          <div class="menu">
+            <div class="menu-item active">
+              <a href="https://hughw19.github.io">主页</a>
+            </div>
+            <span>/</span>
+            <div class="menu-item">
+              <a href="https://PKU-EPIC.github.io">实验室</a>
+            </div>
+          </div>
+        </div>
+        <div class="head-phone">
+          <div class="name">Rongtao Xu</div>
+          <svg
+            class="menu-phone"
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="19"
+            viewBox="0 0 21 19"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 1.5C0 0.671573 0.671573 0 1.5 0H19.5C20.3284 0 21 0.671573 21 1.5C21 2.32843 20.3284 3 19.5 3H1.5C0.671573 3 0 2.32843 0 1.5ZM0 9.5C0 8.67157 0.671573 8 1.5 8H19.5C20.3284 8 21 8.67157 21 9.5C21 10.3284 20.3284 11 19.5 11H1.5C0.671573 11 0 10.3284 0 9.5ZM1.5 16C0.671573 16 0 16.6716 0 17.5C0 18.3284 0.671573 19 1.5 19H19.5C20.3284 19 21 18.3284 21 17.5C21 16.6716 20.3284 16 19.5 16H1.5Z"
+              fill="#808080"
+            />
+          </svg>
+        </div>
+      </div>
       <div class="main-content">
         <div class="main-userinfo">
-          <div class="info">
+          <div id="userinfo1" class="info lang-en">
             <div>
               <img class="lazy-load" src="./assets/xurongtao.jpg" alt="" />
-              <div class="icon-phone">
-                <a
-                  href="https://scholar.google.com/citations?user=roCAWkoAAAAJ&hl=en"
-                  ><img
-                    style="width: 18px; height: 18px"
-                    src="./assets/ic_1.svg"
-                    alt=""
-                /></a>
-                <a href="mailto:hewang@pku.edu.cn"
-                  ><img
-                    style="width: 19px; height: 15px"
-                    src="./assets/ic_4.svg"
-                    alt=""
-                /></a>
-                <a href="https://twitter.com/HughWang19"
-                  ><img
-                    style="width: 19px; height: 16px"
-                    src="./assets/ic_3.svg"
-                    alt=""
-                /></a>
-              </div>
             </div>
             <div class="info-right">
               <div class="info-title">Rongtao Xu</div>
               <p>
-                Tenure-track Assistant Professor at
-                <a href="https://english.pku.edu.cn/">Peking University</a>
+                Postdoctoral Researcher at <a href="https://mbzuai.ac.ae/">Mohamed bin Zayed University of Artificial Intelligence</a>
               </p>
               <p>
-                Director of
-                <i>Embodied Perception and InteraCtion (EPIC) Lab</i>
+                Assistant Researcher at the <a href="http://www.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a>
               </p>
-              <p>Director of <i> PKU-Galbot Joint Lab of Embodied AI</i></p>
-              <div class="icon">
-                <a
-                  href="https://scholar.google.com/citations?user=roCAWkoAAAAJ&hl=en"
-                  ><img
-                    style="width: 18px; height: 18px"
-                    src="./assets/ic_1.svg"
-                    alt=""
-                /></a>
-                <a href="mailto:hewang@pku.edu.cn"
-                  ><img
-                    style="width: 19px; height: 15px"
-                    src="./assets/ic_4.svg"
-                    alt=""
-                /></a>
-                <a href="https://twitter.com/HughWang19"
-                  ><img
-                    style="width: 19px; height: 16px"
-                    src="./assets/ic_3.svg"
-                    alt=""
-                /></a>
+              <p>
+                Visiting Scholar at <a href="https://www.sustech.edu.cn/">Southern University of Science and Technology</a>
+              </p>
+              <div class="contact-links">
+                <a href="mailto:xurongtao2022@gmail.com">Email</a> /
+                <a href="https://scholar.google.com.hk/citations?user=_IUq7ooAAAAJ&hl=zh-CN&oi=ao">Google Scholar</a> /
+                <a href="tel:+8618985687680">Phone</a> /
+                <a href="https://github.com/Rongtao-Xu">GitHub</a>  
               </div>
             </div>
           </div>
-          <div class="decs">
+          <div id="userinfo2" class="info lang-cn">
+            <div>
+              <img class="lazy-load" src="./assets/xurongtao.jpg" alt="" />
+            </div>
+            <div class="info-right">
+              <div class="info-title">Rongtao Xu</div>
+              <p>
+                 <a href="https://mbzuai.ac.ae/">阿联酋人工智能大学</a>博士后研究员
+              </p>
+              <p>
+                 <a href="http://www.ia.cas.cn/">中国科学院自动化研究所</a>助理研究员
+              </p>
+              <p>
+                  <a href="https://www.sustech.edu.cn/">南方科技大学</a>访问学者
+              </p>
+              <div class="contact-links">
+                <a href="mailto:xurongtao2022@gmail.com">邮件</a> /
+                <a href="https://scholar.google.com.hk/citations?user=_IUq7ooAAAAJ&hl=zh-CN&oi=ao">谷歌学术</a> /
+                <a href="tel:+8618985687680">电话</a> /
+                <a href="https://github.com/Rongtao-Xu">GitHub</a> 
+              </div>
+            </div>
+          </div>
+          <div class="decs lang-en">
             <p>
-              I am a tenure-track assistant professor in the
-              <a href="https://cfcs.pku.edu.cn/english"
-                >Center on Frontiers of Computing Studies (CFCS)
-              </a>
-              at <a href="https://english.pku.edu.cn/">Peking University.</a> I
-              founded and lead the
-              <i>Embodied Perception and InteraCtion (EPIC) Lab</i> with the
-              mission of developing generalizable skills and embodied multimodal
-              large model for robots to facilitate embodied AGI.
+              I am currently a Postdoctoral Researcher at Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), working with Professor Xiaodan
+              Liang, Professor Ivan Laptev, and Professor Ian Reid. Prior to this, I was an Assistant Researcher at the Institute of Automation, Chinese Academy
+              of Sciences (CASIA), and a Visiting Scholar at Southern University of Science and Technology (working with Professor Feng Zheng). I received my
+              Ph.D. in Artificial Intelligence from the Institute of Automation, Chinese Academy of Sciences (CASIA) in 2024. During my doctoral studies, I was
+              awarded the CAS President’s Scholarship, the National Scholarship, the Beijing Outstanding Graduate Award, the CAS Outstanding Graduate
+              Award,and received Best Paper Nominations at two flagship IEEE conferences. In 2019,I earned a double bachelor’s degree in Mathematics and
+              Computer Science from Huazhong University of Science and Technology (HUST), where I won the highest award in the National Mathematical
+              Modeling Competition. Additionally, I interned at Huazhong University of Science and Technology (under the guidance of Professor Xiang Bai)
+              and at Beijing Academy of Artificial Intelligence/Galbot (under the guidance of Professor He Wang).
             </p>
             <p>
-              I am also the director of the PKU-Galbot joint lab of Embodied AI
-              and the BAAI center of Embodied AI. I have published more than 50
-              papers in top conferences and journals of computer vision,
-              robotics, and learning, including
-              CVPR/ICCV/ECCV/TRO/ICRA/IROS/NeurIPS/ICLR/AAAI. My pioneering work
-              on category-level 6D pose estimation, NOCS, received the 2022
-              World Artificial Intelligence Conference Youth Outstanding Paper
-              (WAICYOP) Award, and my work also received ICCV 2023 best paper
-              finalist, ICRA 2023 outstanding manipulation paper award finalist
-              and Eurographics 2019 best paper honorable mention.
+              My research focuses on intelligent robotics, embodied intelligence, and multimodal large models. I have published over <b>40</b> papers in related
+              academic journals and conferences, including <b>26</b> first‑author or corresponding‑author papers in top‑tier international journals and conferences
+              such as IEEE TPAMI/TIP/TNNLS/TIM/TMM/TCSVT/TGRS, RSS/ICRA/ICCV/AAAI/MICCAI/ICME (<b>15 in CAS Zone 1, 6 in CCF‑A, 8 in Tsinghua‑A, 3 ESI
+              Highly Cited Papers, and 1 IEEE Transactions cover paper</b>). I have presented multiple oral papers at conferences such as NeurIPS, AAAI, and ICRA.
+              My work has been cited over 600 times on Google Scholar,with a cumulative impact factor exceeding 200. I have also applied for and been granted
+              2 invention patents. I am an IEEE member, a member of the China Society of Image and Graphics, the China Graphics Society, and the Chinese
+              Society of Stereology. I serve as a reviewer for international journals and conferences including IEEE TPAMI, IEEE TIP, IEEE TNNLS, IEEE TMM, IEEE
+              TCSVT, IEEE TII, Neural Networks, CVPR, NeurIPS, AAAI, and MICCAI.
+            </p>
+          </div>
+          <div class="decs lang-cn">
+            <p>
+              我现在是阿联酋人工智能大学(MBZUAI)博士后研究员，与梁小丹教授、IvanLaptev教授和IanReid教授一起工作。在此之前，我是中
+              国科学院自动化研究所的助理研究员和南方科技大学访问学者（和郑锋教授一起工作）。我2024年在中国科学院自动化研究所多模
+              态人工智能系统全国重点实验室（CASIA‑MAIS）获得了人工智能博士学位,在学期间曾获得中国科学院院长奖、国家奖学金、北京市
+              优秀毕业生、中国科学院优秀毕业生和两次IEEE旗舰会议最佳论文提名奖。我2019年在华中科技大学(HUST)获得了数学与计算机双
+              学士学位，曾获全国数学建模竞赛最高奖。此外，我曾在华中科技大学（白翔教授指导）和北京智源人工智能研究院/Galbot（王鹤
+              教授指导）实习。
             </p>
             <p>
-              I serve as an associate editor of Image and Vision Computing and
-              serve as an area chair in CVPR 2022 and WACV 2022. Prior to
-              joining Peking University, I received my Ph.D. degree from
-              <a href="https://www.stanford.edu">Stanford University</a> in 2021
-              under the advisory of Prof.
-              <a href="http://geometry.stanford.edu/member/guibas/index.html"
-                >Leonidas J.Guibas</a
-              >
-              and my Bachelor's degree from
-              <a href="http://www.tsinghua.edu.cn/">Tsinghua University</a> in
-              2014.
+              我的研究方向是智能机器人、具身智能、多模态大模型。研究目标在于训练多模态具身大模型和利用有限的数据，以提升机器
+              人在感知、理解、行动和决策等方面的能力。在相关领域学术期刊和会议上共发表论文<b>40</b>余篇,其中以第一作者或通讯作者在
+              IEEE TPAMI/TIP/TNNLS/TIM/TMM/TCSVT/TGRS, RSS/ICRA/ICCV/AAAI/MICCAI/ICME 等国际顶级期刊和会议上发表论文<b>26</b>篇(<b>中科院一区: 15,
+                CCF‑A: 6, 清华‑A:8,ESI高被引论文: 3，IEEETrans封面文章1篇</b>)。曾在NeurIPS、AAAI、ICRA等会议上发表多篇Oral论文,谷歌学术引
+              用700余次，累计影响因子大于200，申请授权发明专利2项。任IEEEmember，中国图像图形学会会员，中国图学学会会员，中国体
+              视学学会会员，担任IEEETPAMI,IEEETIP,IEEETNNLS,IEEETMM,IEEETCSVT,IEEETII,NeuralNetworks, CVPR, NeurIPS, AAAI, MICCAI 等国际
+              期刊和会议的审稿人。组织CVPR2025具身智能国际挑战赛。
             </p>
           </div>
         </div>
@@ -350,456 +435,692 @@
       </div>
       <div class="main-content">
         <div id="news" class="main-news">
-          <div class="title">NEWS</div>
-          <ul>
-            <li>Two papers get accepted to CVPR 2025.</li>
-            <li>Two papers get accepted to RA-L.</li>
-            <li>Five papers get accepted to ICRA 2025.</li>
-            <li>One paper get accepted to TPAMI.</li>
-            <li>Four papers get accepted to CoRL 2024.</li>
-            <li>
-              SAGE,won the <span>Best Paper Award</span> at RSS 2024 SemRob
-              Workshop.
-            </li>
+          <div class="title lang-en">NEWS</div>
+          <div class="title lang-cn">新闻</div>
+          <ul class="lang-en">
+            <li><a href="https://mp.weixin.qq.com/s/ZcQqfP9oL1Q0E3un5fd36w">Interviewed by Huake Artificial Intelligence Institute.</a></li>
+            <li><a href="https://mp.weixin.qq.com/s/gLe-fmaNAR4cV9aMKauW1w">Chinese Academy of Sciences Automation graduates with Dean's Award and Outstanding Graduates</a></li>
+            <li>Organizing 3rd CVPR'2025 workshop EAI Workshop.</li>
+            <li>One paper (SCD) accepted to <a href="https://mp.weixin.qq.com/s/VV9mQKuh-6fsHT9KSlLNpw">NeurIPS 2024 as oral presentation</a>.</li>
+            <li>Received the 2024 National Scholarship.</li>
+            <li>Received Excellent Prize of the President Scholarship of CAS.</li>
             <li>Two papers get accepted to IROS 2024.</li>
             <li>Two papers get accepted to RSS 2024.</li>
-            <li>
-              I accepted an interview from Xinhua News Agency's Economic
-              Information Daily titled "<a
-                href="https://h.xinhuaxmt.com/vh512/share/12055247?d=134d8e5&channel=weixin"
-                >Humanoid Robots Open the Blueprint of Embodied Intelligence</a
-              >."
+            <li>One paper accepted to ICRA 2024; One paper accepted to AAAI 2024; One paper accepted to TIP; One paper accepted to Information Fusion; Two paper accepted to IEEE JBHI.
             </li>
+            <li> Received Beijing Outstanding Graduates and CAS Outstanding Graduates.</li>
             <li>
-              I accepted an interview from 36Kr titled "<a
-                href="https://mp.weixin.qq.com/s/xE6xmcuDRbhrGtIqMCzGpQ"
-                >After the Impact of Large Models on the Humanoid Robot Track, a
-                Trillion-Dollar Market's New Narrative</a
-              >."
+              One paper (<a href="https://mp.weixin.qq.com/s/6WArpKNrFSpZ7VQYYTey8w">NaVid</a>) accepted to RSS 2024.
             </li>
-            <li>
-              I was invited to participate in CCTV-2's "Dialogue" program on the
-              theme of "<a
-                href="https://tv.cctv.com/2024/05/25/VIDECvVzKGwoW4y2w3bkgTLD240525.shtml?spm=C22284.P87019257382.EMqe9pBD7J5t.63"
-                >Humanoid Robots: Coexisting with Humans</a
-              >."
-            </li>
-            <li>Two papers get accepted to CVPR 2024.</li>
-            <li>
-              Three papers get accepted to ICRA 2024 and one paper gets accepted
-              by RAL.
-            </li>
-            <li>
-              Our 3D dexterous grasping policy learning paper, UniDexGrasp++,
-              receives<span> ICCV 2023 best paper finalist</span>.
-            </li>
-            <li>One paper gets accepted to SIGGRAPH Asia 2023.</li>
-            <li>
-              Three papers get accepted to ICCV 2023 with UniDexGrasp++
-              receiving final reviews of <span>all strong accepts</span> (the
-              highest ratings).
-            </li>
-            <li>
-              I am invited to be a speaker in
-              <a href="https://sites.google.com/view/hands2023/home"
-                >HANDS workshop</a
-              >
-              at ICCV 2023.
-            </li>
-            <li>
-              I am invited to be a speaker in
-              <a href="https://generalist-robots.github.io/speakers/"
-                >Towards Generalist Robots: Learning Paradigms for Scalable
-                Skill Acquisition Workshop </a
-              >at CoRL 2023.
-            </li>
-            <li>
-              I am invited to be a speaker in
-              <a href="https://sites.google.com/view/rss23-sym"
-                >Workshop on Symmetries in Robot Learning</a
-              >
-              at RSS 2023.
-            </li>
-            <li>
-              Our dexterous grasping synthesis and dataset paper, DexGraspNet,
-              is selected as a
-              <span
-                >finalist of ICRA 2023 outstanding paper in manipulation</span
-              >
-              (top 1% of submissions).
-            </li>
-            <li>
-              Seven papers get accepted to CVPR 2023 with GAPartNet
-              receiving<span> highlight</span> (top 2.5% of submissions) with
-              final reviews of <span>all accepts</span> (the highest ratings).
-            </li>
-            <li>
-              I am invited to be an associate editor of
-              <a
-                href="https://www.sciencedirect.com/journal/image-and-vision-computing"
-                >Image and Vision Computing</a
-              >, which ranks top 20 in computer vision journals/conferences on
-              Google Scholar Metrics.
-            </li>
-            <li>
-              Two papers get accepted to ICLR 2023 with one as<span>
-                spotlight</span
-              >.
-            </li>
-            <li>Two papers get accepted to ICRA 2023.</li>
-            <li>
-              One paper gets accepted to AAAI 2023 as
-              <span>oral presentation</span>.
-            </li>
-            <li>
-              My first-author CVPR 2019 oral paper,
-              <a
-                href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Normalized_Object_Coordinate_Space_for_Category-Level_6D_Object_Pose_and_CVPR_2019_paper.pdf"
-                >NOCS</a
-              >, received
-              <a href="https://www.worldaic.com.cn/activity#q1"
-                >2022 World Artificial Intelligence Conference Youth Outstanding
-                Paper Award</a
-              >. Top 10 from 155 papers published in top-tier AI conferences and
-              top journals (Science, Nature Computational Method, etc.) in the
-              past 3 years.
-            </li>
-            <li>One paper gets accepted to T-RO.</li>
-            <li>One paper gets accepted to ECCV 2022.</li>
-            <li>
-              One paper gets accepted to Robotics and Automation Letters (RA-L)
-              and IROS 2022.
-            </li>
-            <li>
-              My students and I won the <span>first place </span>in the no
-              external annotation track of
-              <a href="https://sapien.ucsd.edu/challenges/maniskill2021/"
-                >SAPIEN Manipulation Skill Challenge 2021</a
-              >
-              and will receive $3000 prize and give a winner presentation in
-              <a
-                href="https://ai-workshops.github.io/generalizable-policy-learning-in-the-physical-world/"
-                >ICLR 2022 Generalizable Policy Learning in the Physical World
-                Workshop</a
-              >.
-            </li>
-            <li>
-              Two papers are selected to <span>oral presentations</span> in CVPR
-              2022.
-            </li>
-            <li>Seven papers get accepted to CVPR 2022.</li>
+            <li>One paper (RSSFormer) accepted to TIP, and received ESI Highly Cited Paper.</li>
+            <li>One paper (WaveCAM) accepted to TMM, received ESI Highly Cited Paper, selected for <a href="https://tc.ccf.org.cn/tcmt/xsdt/lwdd/2024-03-13/814224.shtml">the 2024 Paper Reading of CCF TCMT</a>.</li>
+            <li>One paper (DomainFeat) accepted to TCSVT, received ESI Highly Cited Paper, received Cover Article.</li>
+            <li>One paper (<a href="https://mp.weixin.qq.com/s/tkUNZkUhVsDyPZ0z0D2FqA">SCD</a>) accepted to AAAI 2023 as oral presentation.</li>
+            <li>One paper (SoftGAN) accepted to ICME, and received Best Paper Nomination Award; Four papers were accepted by AAAI, TMM, MICCAI and ICASSP respectively.</li>
+            <li>Two papers accepted to ISIB, one of which received Best Student Paper Nomination Award; One paper accepted to MICCAI.</li>
+            <li> <a href="https://mp.weixin.qq.com/s/2CODqqGjv6dD2V2wxn8oyg">I won the highest award in the National Mathematical Modeling Competition.</a></li>
+            <li>...</li>
+          </ul>
+          <ul class="lang-cn">
+            <li><a href="https://mp.weixin.qq.com/s/ZcQqfP9oL1Q0E3un5fd36w">受访于华中科技大学人工智能研究院</a></li>
+            <li><a href="https://mp.weixin.qq.com/s/gLe-fmaNAR4cV9aMKauW1w">毕业于中国科学院自动化研究所，获院长奖与优秀毕业生称号</a></li>
+            <li>正在组织 CVPR 2025 第三届 EAI Workshop</li>
+            <li>一篇论文（SCD）被 <a href="https://mp.weixin.qq.com/s/VV9mQKuh-6fsHT9KSlLNpw">NeurIPS 2024 接收为口头报告</a></li>
+            <li>获得 2024 年国家奖学金</li>
+            <li>获得中科院院长奖优秀奖</li>
+            <li>两篇论文被 IROS 2024 接收</li>
+            <li>两篇论文被 RSS 2024 接收</li>
+            <li>一篇论文被 ICRA 2024 接收；一篇论文被 AAAI 2024 接收；一篇论文被 IEEE TIP 接收；一篇论文被 Information Fusion 接收；两篇论文被 IEEE JBHI 接收</li>
+            <li>获得北京市优秀毕业生和中科院优秀毕业生称号</li>
+            <li>一篇论文（<a href="https://mp.weixin.qq.com/s/6WArpKNrFSpZ7VQYYTey8w">NaVid</a>）被 RSS 2024 接收</li>
+            <li>一篇论文（RSSFormer）被 IEEE TIP 接收，并入选 ESI 高被引论文</li>
+            <li>一篇论文（WaveCAM）被 IEEE TMM 接收，入选 ESI 高被引论文，入选 <a href="https://tc.ccf.org.cn/tcmt/xsdt/lwdd/2024-03-13/814224.shtml">2024 CCF 图文所论文导读</a></li>
+            <li>一篇论文（DomainFeat）被 IEEE TCSVT 接收，入选 ESI 高被引论文，并作为封面文章发表</li>
+            <li>一篇论文（<a href="https://mp.weixin.qq.com/s/tkUNZkUhVsDyPZ0z0D2FqA">SCD</a>）被 AAAI 2023 接收为口头报告</li>
+            <li>一篇论文（SoftGAN）被 ICME 接收，并获得最佳论文提名奖；另有四篇论文分别被 AAAI、TMM、MICCAI 和 ICASSP 接收</li>
+            <li>两篇论文被 ISIB 接收，其中一篇获得最佳学生论文提名奖；另有一篇论文被 MICCAI 接收</li>
+            <li><a href="https://mp.weixin.qq.com/s/2CODqqGjv6dD2V2wxn8oyg">在全国大学生数学建模竞赛中荣获“高等教育杯”最高奖</a></li>
             <li>...</li>
           </ul>
         </div>
       </div>
       <div class="main-content">
         <div id="publications" class="main-selected">
-        <div class="title">SELECTED PUBLICATIONS</div>
-        <div class="selected-item">
-            <video autoplay muted playsinline loop  preload="auto">
-                <source src="./assets/Constraint.mp4" type="video/mp4" />
-            </video>
-            <div class="item-right">
-                <div class="item-title">
-                    Constraint-Aware Zero-Shot Vision-Language Navigation in Continuous Environments
-                </div>
-                <p>
-                    Kehan Chen*, Dong An*, Yan Huang, Rongtao Xu, Yifei Su, Yonggen Ling, Ian Reid, 
-                    <b>Liang Wang<span>&#8224;</span></b>
-                </p>
-                <p class="decs">arXiv 2024</p>
-                <div class="button">
-                    <a href="https://arxiv.org/pdf/2412.10137">Paper</a>
-                    <a href="https://chenkehan21.github.io/CA-Nav-project/">Project</a>
-                </div>
-            </div>
-         </div>        
-         <div class="selected-item">
-            <!-- <img class="lazy-load" src="./assets/xu_3.png" alt="" /> -->
-            <!-- <video playsinline="" muted="" autoplay="" loop="" width="180px">
-              <source src="./assets/robopanotes.mp4" type="video/mp4">
-            </video> -->
-            <video id="navid-video" autoplay muted playsinline loop  preload="auto">
-              <source src="./assets/Navid.mp4" type="video/mp4" />
-            </video>
-            <div class="item-right">
-                <div class="item-title">
-                    NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation
-                </div>
-                <p>
-                    Jiazhao Zhang*, Kunyu Wang*, Rongtao Xu*, Gengze Zhou, Yicong Hong, 
-                    Xiaomeng Fang, Qi Wu, Zhizheng Zhang<span>&#8224;</span>, <b>He Wang<span>&#8224;</span></b>
-                </p>
-                <p class="decs">arXiv 2024</p>
-                <div class="button">
-                    <a href="https://arxiv.org/pdf/2402.15852">Paper</a>
-                    <a href="https://pku-epic.github.io/NaVid/">Project</a>
-                </div>
-            </div>
-          </div>
+          <div class="title lang-en">SELECTED PUBLICATIONS</div>
+          <div class="title lang-cn">精选论文</div>
+          <div class="lang-en">
           <div class="selected-item">
-              <img class="lazy-load" src="./assets/xu_4.png" alt="" />
-            <div class="item-right">
-                <div class="item-title">
-                    NeuroClips: Towards High-fidelity and Smooth fMRI-to-Video Reconstruction
-                </div>
-                <p>
-                    Zixuan Gong*, Guangyin Bao*, Qi Zhang†, Zhongwei Wan, Duoqian Miao†, Shoujin Wang, 
-                    Lei Zhu, Changwei Wang, Rongtao Xu, Liang Hu, Ke Liu, Yu Zhang
-                </p>
-                <p class="decs">NeurIPS 2024 <b>(Oral)</b></p>
-                <div class="button">
-                    <a href="https://arxiv.org/pdf/2410.19452">Paper</a>
-                    <a href="https://github.com/gongzix/NeuroClips">Code</a>
-                </div>
-            </div>
+              <video autoplay muted playsinline loop  preload="auto">
+                  <source src="./assets/Constraint.mp4" type="video/mp4" />
+              </video>
+              <div class="item-right">
+                  <div class="item-title">
+                      Constraint-Aware Zero-Shot Vision-Language Navigation in Continuous Environments
+                  </div>
+                  <p>
+                      Kehan Chen*, Dong An*, Yan Huang, Rongtao Xu, Yifei Su, Yonggen Ling, Ian Reid, 
+                      <b>Liang Wang<span>&#8224;</span></b>
+                  </p>
+                  <p class="decs">arXiv 2024</p>
+                  <div class="button">
+                      <a href="https://arxiv.org/pdf/2412.10137">Paper</a>
+                      <a href="https://chenkehan21.github.io/CA-Nav-project/">Project</a>
+                  </div>
+              </div>
           </div>        
-          <div class="selected-item">
-            <img class="lazy-load" src="./assets/xu_5.png" alt="" />
-            <div class="item-right">
-              <div class="item-title">
-                DefFusion: Deformable Multimodal Representation Fusion for 3D Semantic Segmentation
+          <div class="selected-item ">
+              <!-- <img class="lazy-load" src="./assets/xu_3.png" alt="" /> -->
+              <!-- <video playsinline="" muted="" autoplay="" loop="" width="180px">
+                <source src="./assets/robopanotes.mp4" type="video/mp4">
+              </video> -->
+              <video id="navid-video" autoplay muted playsinline loop  preload="auto">
+                <source src="./assets/Navid.mp4" type="video/mp4" />
+              </video>
+              <div class="item-right">
+                  <div class="item-title">
+                      NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation
+                  </div>
+                  <p>
+                      Jiazhao Zhang*, Kunyu Wang*, Rongtao Xu*, Gengze Zhou, Yicong Hong, 
+                      Xiaomeng Fang, Qi Wu, Zhizheng Zhang<span>&#8224;</span>, <b>He Wang<span>&#8224;</span></b>
+                  </p>
+                  <p class="decs">arXiv 2024</p>
+                  <div class="button">
+                      <a href="https://arxiv.org/pdf/2402.15852">Paper</a>
+                      <a href="https://pku-epic.github.io/NaVid/">Project</a>
+                  </div>
               </div>
-              <p>
-                Rongtao Xu, Changwei Wang, Duzhen Zhang, Man Zhang,
-                Shibiao Xu<sup>*</sup>, Weiliang Meng<sup>*</sup>, Xiaopeng Zhang
-              </p>
-              <p class="decs">ICRA 2024 <b>(Oral)</b></p>
-              <div class="button">
-                <a href="https://ieeexplore.ieee.org/abstract/document/10610465">Paper</a>
-                <!-- <a href="https://zhoues.github.io/Code-as-Monitor/">Project</a> -->
+            </div>
+            <div class="selected-item">
+                <img class="lazy-load" src="./assets/xu_4.png" alt="" />
+              <div class="item-right">
+                  <div class="item-title">
+                      NeuroClips: Towards High-fidelity and Smooth fMRI-to-Video Reconstruction
+                  </div>
+                  <p>
+                      Zixuan Gong*, Guangyin Bao*, Qi Zhang†, Zhongwei Wan, Duoqian Miao†, Shoujin Wang, 
+                      Lei Zhu, Changwei Wang, Rongtao Xu, Liang Hu, Ke Liu, Yu Zhang
+                  </p>
+                  <p class="decs">NeurIPS 2024 <b>(Oral)</b></p>
+                  <div class="button">
+                      <a href="https://arxiv.org/pdf/2410.19452">Paper</a>
+                      <a href="https://github.com/gongzix/NeuroClips">Code</a>
+                  </div>
+              </div>
+            </div>        
+            <div class="selected-item">
+              <img class="lazy-load" src="./assets/xu_5.png" alt="" />
+              <div class="item-right">
+                <div class="item-title">
+                  DefFusion: Deformable Multimodal Representation Fusion for 3D Semantic Segmentation
+                </div>
+                <p>
+                  Rongtao Xu, Changwei Wang, Duzhen Zhang, Man Zhang,
+                  Shibiao Xu<sup>*</sup>, Weiliang Meng<sup>*</sup>, Xiaopeng Zhang
+                </p>
+                <p class="decs">ICRA 2024 <b>(Oral)</b></p>
+                <div class="button">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10610465">Paper</a>
+                  <!-- <a href="https://zhoues.github.io/Code-as-Monitor/">Project</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="selected-item">
+              <img class="lazy-load" src="./assets/xu_6.png" alt="" />
+              <div class="item-right">
+                <div class="item-title">
+                  Spectral Prompt Tuning: Unveiling Unseen Classes for Zero-Shot Semantic Segmentation
+                </div>
+                <p>
+                  Wenhao Xu<sup>*</sup>, Rongtao Xu<sup>*</sup>, Changwei Wang, Shibiao Xu<sup>†</sup>, Li Guo, Man Zhang, Xiaopeng Zhang
+                </p>
+                <p class="decs">AAAI 2024</p>
+                <div class="button">
+                  <a href="https://ojs.aaai.org/index.php/AAAI/article/download/28456/28888">Paper</a>
+                </div>
+              </div>
+            </div>
+            <div class="selected-item">
+              <img class="lazy-load" src="./assets/xu_7.png" alt="" />
+              <div class="item-right">
+                <div class="item-title">
+                  RSSFormer: Foreground Saliency Enhancement for Remote Sensing Land-Cover Segmentation
+                </div>
+                <p>
+                  Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Jiguang Zhang, Shibiao Xu<sup>†</sup>, Weiliang Meng, Xiaopeng Zhang
+                </p>
+                <p class="decs">IEEE TIP, 2023 <b>(ESI Highly Cited Paper)</b></p>
+                <div class="button">
+                  <a href="https://ieeexplore.ieee.org/document/10047119">Paper</a>
+                  <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/RSSFormer-TIP2023">Code</a>
+                </div>
+              </div>
+            </div>                    
+            <div class="selected-item">
+              <img class="lazy-load" src="./assets/xu_8.png" alt="" />
+              <div class="item-right">
+                <div class="item-title">
+                  Attention Weighted Local Descriptors
+                </div>
+                <p>
+                  Changwei Wang<sup>*</sup>, Rongtao Xu<sup>*</sup>, Ke Lu, Shibiao Xu<sup>†</sup>, Weiliang Meng, Yuyang Zhang, Bin Fan, Xiaopeng Zhang<sup>†</sup>
+                </p>
+                <p class="decs">IEEE TPAMI, 2023</p>
+                <div class="button">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10105519">Paper</a>
+                  <a href="https://github.com/vignywang/AWDesc">Code</a>
+                </div>
+              </div>
+            </div>
+            <div class="selected-item">
+              <img class="lazy-load" src="./assets/xu_9.png" alt="" />
+              <div class="item-right">
+                <div class="item-title">
+                  Wave-Like Class Activation Map With Representation Fusion for Weakly-Supervised Semantic Segmentation
+                </div>
+                <p>
+                  Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng, Xiaopeng Zhang
+                </p>
+                <p class="decs">IEEE TMM, 2024 <b>(ESI Highly Cited Paper)</b></p>
+                <div class="button">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10104136">Paper</a>
+                  <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/WaveCAM-TMM2023">Code</a>
+                </div>
+              </div>
+            </div>
+            <div class="selected-item">
+              <video autoplay muted playsinline loop  preload="auto">
+                <source src="./assets/domainfeat.mp4" type="video/mp4" />
+              </video>
+              <div class="item-right">
+                <div class="item-title">
+                  DomainFeat: Learning Local Features With Domain Adaptation
+                </div>
+                <p>
+                  Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng, Yuyang Zhang, Bin Fan, Xiaopeng Zhang
+                </p>
+                <p class="decs">IEEE TCSVT, 2024 <b>(ESI Highly Cited Paper)</b></p>
+                <div class="button">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10144412">Paper</a>
+                </div>
+              </div>
+            </div>          
+            <div class="selected-item">
+              <img class="lazy-load" src="./assets/xu_11.png" alt="" />
+              <div class="item-right">
+                <div class="item-title">
+                  Self Correspondence Distillation for End-to-End Weakly-Supervised Semantic Segmentation
+                </div>
+                <p>
+                  Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Jiaxi Sun, Shibiao Xu<sup>†</sup>, Weiliang Meng<sup>†</sup>, Xiaopeng Zhang
+                </p>
+                <p class="decs">AAAI 2023 <b>(Oral)</b></p>
+                <div class="button">
+                  <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25408/25180">Paper</a>
+                  <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/SCD-AAAI2023">Code</a>
+                </div>
+              </div>
+            </div>      
+            <div class="selected-item">
+              <img class="lazy-load" src="./assets/xu_12.png" alt="" />
+              <div class="item-right">
+                <div class="item-title">
+                  Treating Pseudo-labels Generation as Image Matting for Weakly Supervised Semantic Segmentation
+                </div>
+                <p>
+                  Changwei Wang<sup>*</sup>, Rongtao Xu<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng<sup>†</sup>, Xiaopeng Zhang
+                </p>
+                <p class="decs">ICCV 2023</p>
+                <div class="button">
+                  <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Wang_Treating_Pseudo-labels_Generation_as_Image_Matting_for_Weakly_Supervised_Semantic_ICCV_2023_paper.html">Paper</a>
+                  <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/Mat-Label-ICCV2023">Code</a>
+                </div>
+              </div>
+            </div>  
+            <div class="selected-item">
+              <img class="lazy-load" src="./assets/xu_13.png" alt="" />
+              <div class="item-right">
+                <div class="item-title">
+                  Accurate Lung Nodule Segmentation with Detailed Representation Transfer and Soft Mask Supervision
+                </div>
+                <p>
+                  Changwei Wang<sup>*</sup>, Rongtao Xu<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng<sup>†</sup>, Jun Xiao, Xiaopeng Zhang
+                </p>
+                <p class="decs">IEEE TNNLS, 2023</p>
+                <div class="button">
+                  <a href="https://arxiv.org/abs/2007.14556">Paper</a>
+                  <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/DSNet-TMI2024">Code</a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="selected-item">
-            <img class="lazy-load" src="./assets/xu_6.png" alt="" />
-            <div class="item-right">
-              <div class="item-title">
-                Spectral Prompt Tuning: Unveiling Unseen Classes for Zero-Shot Semantic Segmentation
-              </div>
-              <p>
-                Wenhao Xu<sup>*</sup>, Rongtao Xu<sup>*</sup>, Changwei Wang, Shibiao Xu<sup>†</sup>, Li Guo, Man Zhang, Xiaopeng Zhang
-              </p>
-              <p class="decs">AAAI 2024</p>
-              <div class="button">
-                <a href="https://ojs.aaai.org/index.php/AAAI/article/download/28456/28888">Paper</a>
-              </div>
+          <div class="lang-cn">
+            <div class="selected-item">    
+              <video autoplay muted playsinline loop preload="auto">      
+                <source src="./assets/Constraint.mp4" type="video/mp4" />    
+              </video>    
+              <div class="item-right">      
+                <div class="item-title">面向约束的零样本视觉语言导航方法</div>      
+                  <p>Kehan Chen*, Dong An*, Yan Huang, Rongtao Xu, Yifei Su, Yonggen Ling, Ian Reid, <b>Liang Wang<span>&#8224;</span></b></p>      
+                  <p class="decs">arXiv 2024</p>      
+                  <div class="button">        
+                  <a href="https://arxiv.org/pdf/2412.10137">论文</a>        
+                  <a href="https://chenkehan21.github.io/CA-Nav-project/">项目</a>      
+                  </div>    
+                </div>  
             </div>
-          </div>
-          <div class="selected-item">
-            <img class="lazy-load" src="./assets/xu_7.png" alt="" />
-            <div class="item-right">
-              <div class="item-title">
-                RSSFormer: Foreground Saliency Enhancement for Remote Sensing Land-Cover Segmentation
-              </div>
-              <p>
-                Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Jiguang Zhang, Shibiao Xu<sup>†</sup>, Weiliang Meng, Xiaopeng Zhang
-              </p>
-              <p class="decs">IEEE TIP, 2023 <b>(ESI Highly Cited Paper)</b></p>
-              <div class="button">
-                <a href="https://ieeexplore.ieee.org/document/10047119">Paper</a>
-                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/RSSFormer-TIP2023">Code</a>
-              </div>
+            <div class="selected-item">    
+              <video id="navid-video" autoplay muted playsinline loop preload="auto">      
+              <source src="./assets/Navid.mp4" type="video/mp4" />    
+              </video>    
+              <div class="item-right">      
+              <div class="item-title">NaVid:基于视频的视觉语言模型导航框架</div>      
+              <p>Jiazhao Zhang*, Kunyu Wang*, Rongtao Xu*, Gengze Zhou, Yicong Hong, Xiaomeng Fang, Qi Wu, Zhizheng Zhang<span>&#8224;</span>, <b>He Wang<span>&#8224;</span></b></p>      
+              <p class="decs">arXiv 2024</p>      
+              <div class="button">        
+              <a href="https://arxiv.org/pdf/2402.15852">论文</a>        
+              <a href="https://pku-epic.github.io/NaVid/">项目</a>      
+              </div>    
+              </div>  
             </div>
-          </div>                    
-          <div class="selected-item">
-            <img class="lazy-load" src="./assets/xu_8.png" alt="" />
-            <div class="item-right">
-              <div class="item-title">
-                Attention Weighted Local Descriptors
-              </div>
-              <p>
-                Changwei Wang<sup>*</sup>, Rongtao Xu<sup>*</sup>, Ke Lu, Shibiao Xu<sup>†</sup>, Weiliang Meng, Yuyang Zhang, Bin Fan, Xiaopeng Zhang<sup>†</sup>
-              </p>
-              <p class="decs">IEEE TPAMI, 2023</p>
-              <div class="button">
-                <a href="https://ieeexplore.ieee.org/abstract/document/10105519">Paper</a>
-                <a href="https://github.com/vignywang/AWDesc">Code</a>
-              </div>
+            <div class="selected-item">    
+              <img class="lazy-load" src="./assets/xu_4.png" alt="" />    
+              <div class="item-right">      
+              <div class="item-title">NeuroClips:高保真与连续的脑功能成像到视频重建方法</div>      
+              <p>Zixuan Gong*, Guangyin Bao*, Qi Zhang†, Zhongwei Wan, Duoqian Miao†, Shoujin Wang, Lei Zhu, Changwei Wang, Rongtao Xu, Liang Hu, Ke Liu, Yu Zhang</p>      
+              <p class="decs">NeurIPS 2024 <b>（口头报告）</b></p>      
+              <div class="button">        
+              <a href="https://arxiv.org/pdf/2410.19452">论文</a>        
+              <a href="https://github.com/gongzix/NeuroClips">代码</a>      
+              </div>    
+              </div>  
             </div>
-          </div>
-          <div class="selected-item">
-            <img class="lazy-load" src="./assets/xu_9.png" alt="" />
-            <div class="item-right">
-              <div class="item-title">
-                Wave-Like Class Activation Map With Representation Fusion for Weakly-Supervised Semantic Segmentation
-              </div>
-              <p>
-                Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng, Xiaopeng Zhang
-              </p>
-              <p class="decs">IEEE TMM, 2024 <b>(ESI Highly Cited Paper)</b></p>
-              <div class="button">
-                <a href="https://ieeexplore.ieee.org/abstract/document/10104136">Paper</a>
-                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/WaveCAM-TMM2023">Code</a>
-              </div>
+            <div class="selected-item">    
+              <img class="lazy-load" src="./assets/xu_5.png" alt="" />    
+              <div class="item-right">      
+              <div class="item-title">DefFusion:面向三维语义分割的可变形多模态融合方法</div>      
+              <p>Rongtao Xu, Changwei Wang, Duzhen Zhang, Man Zhang, Shibiao Xu<sup>*</sup>, Weiliang Meng<sup>*</sup>, Xiaopeng Zhang</p>      
+              <p class="decs">ICRA 2024 <b>（口头报告）</b></p>      
+              <div class="button">        
+              <a href="https://ieeexplore.ieee.org/abstract/document/10610465">论文</a>      
+              </div>    
+              </div>  
             </div>
-          </div>
-          <div class="selected-item">
-            <video autoplay muted playsinline loop  preload="auto">
-              <source src="./assets/domainfeat.mp4" type="video/mp4" />
-            </video>
-            <div class="item-right">
-              <div class="item-title">
-                DomainFeat: Learning Local Features With Domain Adaptation
+            <div class="selected-item">    
+                <img class="lazy-load" src="./assets/xu_6.png" alt="" />    
+                <div class="item-right">      
+                <div class="item-title">光谱提示调优：发现零样本语义分割中的未知类别</div>      
+                <p>Wenhao Xu<sup>*</sup>, Rongtao Xu<sup>*</sup>, Changwei Wang, Shibiao Xu<sup>†</sup>, Li Guo, Man Zhang, Xiaopeng Zhang</p>      
+                <p class="decs">AAAI 2024</p>      
+                <div class="button">        
+                <a href="https://ojs.aaai.org/index.php/AAAI/article/download/28456/28888">论文</a>      
+                </div>    
+                </div>  
               </div>
-              <p>
-                Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng, Yuyang Zhang, Bin Fan, Xiaopeng Zhang
-              </p>
-              <p class="decs">IEEE TCSVT, 2024 <b>(ESI Highly Cited Paper)</b></p>
-              <div class="button">
-                <a href="https://ieeexplore.ieee.org/abstract/document/10144412">Paper</a>
+              <div class="selected-item">    
+                <img class="lazy-load" src="./assets/xu_7.png" alt="" />    
+                <div class="item-right">      
+                <div class="item-title">RSSFormer：遥感图像中的前景显著性增强分割方法</div>      
+                <p>Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Jiguang Zhang, Shibiao Xu<sup>†</sup>, Weiliang Meng, Xiaopeng Zhang</p>      
+                <p class="decs">IEEE TIP, 2023 <b>（ESI 高被引论文）</b></p>      
+                <div class="button">        
+                <a href="https://ieeexplore.ieee.org/document/10047119">论文</a>        
+                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/RSSFormer-TIP2023">代码</a>      
+                </div>    
+                </div>  
               </div>
+              <div class="selected-item">    
+                <img class="lazy-load" src="./assets/xu_8.png" alt="" />    
+                <div class="item-right">      
+                <div class="item-title">注意力加权的局部特征描述子</div>      
+                <p>Changwei Wang<sup>*</sup>, Rongtao Xu<sup>*</sup>, Ke Lu, Shibiao Xu<sup>†</sup>, Weiliang Meng, Yuyang Zhang, Bin Fan, Xiaopeng Zhang<sup>†</sup></p>      
+                <p class="decs">IEEE TPAMI, 2023</p>      
+                <div class="button">        
+                <a href="https://ieeexplore.ieee.org/abstract/document/10105519">论文</a>        
+                <a href="https://github.com/vignywang/AWDesc">代码</a>      
+                </div>    
+                </div>  
+              </div>
+              <div class="selected-item">    
+                <img class="lazy-load" src="./assets/xu_9.png" alt="" />    
+                <div class="item-right">      
+                <div class="item-title">WaveCAM：用于弱监督语义分割的类激活图与特征融合</div>      
+                <p>Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng, Xiaopeng Zhang</p>      
+                <p class="decs">IEEE TMM, 2024 <b>（ESI 高被引论文）</b></p>      
+                <div class="button">        
+                <a href="https://ieeexplore.ieee.org/abstract/document/10104136">论文</a>        
+                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/WaveCAM-TMM2023">代码</a>      
+                </div>    
+                </div>  
+              </div>
+              <div class="selected-item">    
+                <video autoplay muted playsinline loop preload="auto">      
+                <source src="./assets/domainfeat.mp4" type="video/mp4" />    
+                </video>    
+                <div class="item-right">      
+                <div class="item-title">DomainFeat：结合领域自适应的局部特征学习方法</div>      
+                <p>Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng, Yuyang Zhang, Bin Fan, Xiaopeng Zhang</p>      
+                <p class="decs">IEEE TCSVT, 2024 <b>（ESI 高被引论文）</b></p>      
+                <div class="button">        
+                <a href="https://ieeexplore.ieee.org/abstract/document/10144412">论文</a>      
+                </div>    
+                </div>  
+              </div>
+              <div class="selected-item">    
+                <img class="lazy-load" src="./assets/xu_11.png" alt="" />    
+                <div class="item-right">      
+                <div class="item-title">SCD：用于端到端弱监督语义分割的自监督对应蒸馏</div>      
+                <p>Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Jiaxi Sun, Shibiao Xu<sup>†</sup>, Weiliang Meng<sup>†</sup>, Xiaopeng Zhang</p>      
+                <p class="decs">AAAI 2023 <b>（口头报告）</b></p>      
+                <div class="button">        
+                <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25408/25180">论文</a>        
+                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/SCD-AAAI2023">代码</a>      
+                </div>    
+                </div>  
+              </div>
+              <div class="selected-item">    
+                <img class="lazy-load" src="./assets/xu_12.png" alt="" />    
+                <div class="item-right">      
+                <div class="item-title">将伪标签生成建模为图像抠图任务以提升弱监督语义分割</div>      
+                <p>Changwei Wang<sup>*</sup>, Rongtao Xu<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng<sup>†</sup>, Xiaopeng Zhang</p>      
+                <p class="decs">ICCV 2023</p>      
+                <div class="button">        
+                <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Wang_Treating_Pseudo-labels_Generation_as_Image_Matting_for_Weakly_Supervised_Semantic_ICCV_2023_paper.html">论文</a>        
+                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/Mat-Label-ICCV2023">代码</a>      
+                </div>    
+                </div>  
+              </div>
+              <div class="selected-item">    
+                <img class="lazy-load" src="./assets/xu_13.png" alt="" />    
+                <div class="item-right">      
+                <div class="item-title">基于细粒度特征迁移与软掩码监督的肺结节分割方法</div>      
+                <p>Changwei Wang<sup>*</sup>, Rongtao Xu<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng<sup>†</sup>, Jun Xiao, Xiaopeng Zhang</p>      
+                <p class="decs">IEEE TNNLS, 2023</p>      
+                <div class="button">        
+                <a href="https://arxiv.org/abs/2007.14556">论文</a>        
+                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/DSNet-TMI2024">代码</a>      
+                </div>    
+                </div>  
+              </div>                
             </div>
-          </div>          
-          <div class="selected-item">
-            <img class="lazy-load" src="./assets/xu_11.png" alt="" />
-            <div class="item-right">
-              <div class="item-title">
-                Self Correspondence Distillation for End-to-End Weakly-Supervised Semantic Segmentation
-              </div>
-              <p>
-                Rongtao Xu<sup>*</sup>, Changwei Wang<sup>*</sup>, Jiaxi Sun, Shibiao Xu<sup>†</sup>, Weiliang Meng<sup>†</sup>, Xiaopeng Zhang
-              </p>
-              <p class="decs">AAAI 2023 <b>(Oral)</b></p>
-              <div class="button">
-                <a href="https://ojs.aaai.org/index.php/AAAI/article/download/25408/25180">Paper</a>
-                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/SCD-AAAI2023">Code</a>
-              </div>
-            </div>
-          </div>      
-          <div class="selected-item">
-            <img class="lazy-load" src="./assets/xu_12.png" alt="" />
-            <div class="item-right">
-              <div class="item-title">
-                Treating Pseudo-labels Generation as Image Matting for Weakly Supervised Semantic Segmentation
-              </div>
-              <p>
-                Changwei Wang<sup>*</sup>, Rongtao Xu<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng<sup>†</sup>, Xiaopeng Zhang
-              </p>
-              <p class="decs">ICCV 2023</p>
-              <div class="button">
-                <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Wang_Treating_Pseudo-labels_Generation_as_Image_Matting_for_Weakly_Supervised_Semantic_ICCV_2023_paper.html">Paper</a>
-                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/Mat-Label-ICCV2023">Code</a>
-              </div>
-            </div>
-          </div>  
-          <div class="selected-item">
-            <img class="lazy-load" src="./assets/xu_13.png" alt="" />
-            <div class="item-right">
-              <div class="item-title">
-                Accurate Lung Nodule Segmentation with Detailed Representation Transfer and Soft Mask Supervision
-              </div>
-              <p>
-                Changwei Wang<sup>*</sup>, Rongtao Xu<sup>*</sup>, Shibiao Xu<sup>†</sup>, Weiliang Meng<sup>†</sup>, Jun Xiao, Xiaopeng Zhang
-              </p>
-              <p class="decs">IEEE TNNLS, 2023</p>
-              <div class="button">
-                <a href="https://arxiv.org/abs/2007.14556">Paper</a>
-                <a href="https://github.com/Rongtao-Xu/RepresentationLearning/tree/main/DSNet-TMI2024">Code</a>
-              </div>
-            </div>
-          </div>                      
+        </div>     
+          
+          
+      </div>
+      <div class="main-content">
+        <div id="Patents" class="main-news">
+          <div class="title lang-en">Patents</div>
+          <div class="title lang-cn">授权专利</div>
+
+          <ol class="lang-en pb">
+            <li>
+              <b>Rongtao Xu</b>, Changwei Wang, Shibiao Xu, Weiliang Meng, Xiaopeng Zhang.  
+              Local descriptor generation method, device, electronic device and computer program product.  
+              <i>Patent for invention</i>, Patent Number: CN202210307718.X.
+            </li>
+            <li>
+              <b>Rongtao Xu</b>, Jiguang Zhang, Rui Gong, Weiliang Meng, Xiaopeng Zhang.  
+              Semantic segmentation model training method, semantic segmentation method and related device.  
+              <i>Patent for invention</i>, Patent Number: 2023118441629.
+            </li>
+          </ol>
+
+          <ol class="lang-cn">
+            <li>
+              <b>许镕涛</b>，王常维，徐世彪，孟维亮，张晓鹏。  
+              一种局部描述子生成方法、装置、电子设备及计算机程序产品。  
+              <i>发明专利</i>，专利号：CN202210307718.X。
+            </li>
+            <li>
+              <b>许镕涛</b>，张吉光，巩瑞，孟维亮，张晓鹏。  
+              一种语义分割模型训练方法、语义分割方法及相关装置。  
+              <i>发明专利</i>，专利号：2023118441629。
+            </li>
+          </ol>
+
         </div>
       </div>
       <div class="main-content">
         <div id="awards" class="main-news">
-          <div class="title">AWARDS</div>
-          <ul>
-            <li>ICCV 2023 Best Paper Finalist</li>
-            <li>ICRA 2023 Outstanding Manipulation Paper Finalist</li>
-            <li>
-              2022 World Artificial Intelligence Conference Youth Outstanding
-              Paper Award
-            </li>
-            <li>Eurographics 2019 Best Paper Honorable Mention</li>
-            <li>
-              1st prize winner of
-              <a href="https://sapien.ucsd.edu/challenges/maniskill2021/"
-                >SAPIEN ManiSkill Challenge 2021</a
-              >
-              (no external annotation track)
-            </li>
+          <div class="title lang-en">Achievements</div>
+          <div class="title lang-cn">成就</div>
+          <ul class="lang-en">
+            <li>2024 Excellent Prize of the President Scholarship, Chinese Academy of Sciences</li>
+            <li>2024 Beijing Outstanding Graduates</li>
+            <li>2023 CAS Outstanding Graduates, Chinese Academy of Sciences</li>
+            <li>2023 National Scholarship for PhD Students, Institute of Automation, CAS</li>
+            <li>2022 Best Paper Nomination Award, IEEE ICME 2022</li>
+            <li>2021 Best Student Paper Nomination Award, IEEE ISBI 2021</li>
+            <li>2020 Merit Student, University of Chinese Academy of Sciences</li>
+            <li>2018 Outstanding Graduate, Huazhong University of Science and Technology</li>
+            <li>2017 Highest Award “Higher Education Cup”, CUMCM — the only national winner from HUST</li>
+            <li>2016 Merit Student, Huazhong University of Science and Technology</li>
             <li></li>
           </ul>
+          
+          <ul class="lang-cn">
+            <li>2024 中国科学院院长奖优秀奖</li>
+            <li>2024 北京市优秀毕业生</li>
+            <li>2023 中国科学院优秀毕业生</li>
+            <li>2023 博士研究生国家奖学金（中国科学院自动化研究所）</li>
+            <li>2022 IEEE ICME 最佳论文提名奖</li>
+            <li>2021 IEEE ISBI 最佳学生论文提名奖</li>
+            <li>2020 中国科学院大学三好学生</li>
+            <li>2018 华中科技大学优秀毕业生</li>
+            <li>2017 全国大学生数学建模竞赛最高奖“高教社杯”（校史首次获奖）</li>
+            <li>2016 华中科技大学三好学生</li>
+            <li></li>
+          </ul>
+          
         </div>
       </div>
       <div class="main-content">
         <div id="teaching" class="main-news">
-          <div class="title">TEACHING</div>
-          <ul>
-            <li>
-              Undergraduate course:
-              <a href="https://pku-epic.github.io/Intro2CV_2024/"
-                >Introduction to Computer Vision</a
-              >, Spring 2024
-            </li>
-            <li>
-              Graduate course:
-              <a href="https://hughw19.github.io/RVAL/"
-                >Robot Vision and Learning - From a Perspective of Embodied
-                AI</a
-              >, Fall 2023
-            </li>
-            <li></li>
-          </ul>
+          <div class="title lang-en">Education</div>
+          <div class="title lang-cn">教育背景</div>
+          <div class="edu-item lang-en">
+            <h4>
+              State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences (CASIA)
+              <span class="location">— Beijing, China</span>
+            </h4>
+            <p>PhD in Pattern Recognition and Intelligent System <span class="duration">Sept 2019 - Jun 2024</span></p>
+            <ul>
+              <li>Published 20+ papers as (co-)first author, including <b>JCR Q1 SCI: 11, CCF-A: 6, CCF-B: 8</b></li>
+              <li><b>ESI Highly Cited Paper: 3, Best Paper Nomination: 1</b></li>
+              <li>Excellent Prize of the President Scholarship (CAS), National Scholarship for PhD Students</li>
+            </ul>
+          </div>
+          
+          <div class="edu-item lang-cn">
+            <h4>
+              中国科学院自动化研究所（CASIA）多模态人工智能系统重点实验室
+              <span class="location">— 北京，中国</span>
+            </h4>
+            <p>博士，模式识别与智能系统 <span class="duration">2019年9月 - 2024年6月</span></p>
+            <ul>
+              <li>以第一作者或共同一作发表论文 20+ 篇，其中 <b>JCR Q1 SCI: 11 篇，CCF-A: 6 篇，CCF-B: 8 篇</b></li>
+              <li><b>ESI 高被引论文：3 篇，最佳论文提名：1 项</b></li>
+              <li>获中科院院长奖优秀奖、博士研究生国家奖学金</li>
+            </ul>
+          </div>
+          
+          <div class="edu-item lang-en">
+            <h4>
+              Huazhong University of Science and Technology (HUST)
+              <span class="location">— Wuhan, China</span>
+            </h4>
+            <p>Bachelor of Information and Computing Science (Mathematics), Minor in Computer Science <span class="duration">Jun 2015 - Sept 2019</span></p>
+            <ul>
+              <li>Admitted to MAIS/NLPR, CASIA without entrance exam (2018.10)</li>
+              <li>Won the <b>Highest Award “Higher Education Cup”</b> in CUMCM (first time in HUST history)</li>
+            </ul>
+          </div>
+          
+          <div class="edu-item lang-cn">
+            <h4>
+              华中科技大学（HUST）
+              <span class="location">— 武汉，中国</span>
+            </h4>
+            <p>信息与计算科学学士（数学），计算机辅修 <span class="duration">2015年6月 - 2019年9月</span></p>
+            <ul>
+              <li>2018年10月免试直博至中科院自动化所 MAIS/NLPR</li>
+              <li>在校历史上首次获得全国大学生数学建模竞赛 <b>“高教社杯”最高奖</b></li>
+            </ul>
+          </div>
+          
+          <div class="edu-item lang-en pb">
+            <h4>
+              Guiyang No.1 High School
+              <span class="location">— Guiyang, China</span>
+            </h4>
+            <p>High School <span class="duration">Sept 2012 - Jun 2015</span></p>
+            <ul>
+              <li>Science Experimental Class; Second Prize in Math/Physics (National Olympiad)</li>
+            </ul>
+          </div>
+          
+          <div class="edu-item lang-cn pb">
+            <h4>
+              贵阳一中
+              <span class="location">— 贵阳，中国</span>
+            </h4>
+            <p>高中 <span class="duration">2012年9月 - 2015年6月</span></p>
+            <ul>
+              <li>理科实验班；全国高中数学/物理奥林匹克竞赛省二等奖</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="main-content">
-        <div id="professional" class="main-news">
-          <div class="title">PROFESSIONAL SERVICE</div>
-          <ul>
-            <li>
-              Associate Editor:
-              <a
-                href="https://www.sciencedirect.com/journal/image-and-vision-computing"
-                >Image and Vision Computing</a
-              >
-            </li>
-            <li>
-              Area chair (AC):
-              <br />Conferences: CVPR 2022, WACV 2022 <br />Seminars:
-              <a href="http://valser.org">VALSE</a>
-            </li>
-            <li>
-              Program committee/reviewer:
-              <br />Conferences: CVPR, ICCV, ECCV, NeurIPS, ICLR, AAAI,
-              SIGGRAPH, RSS, IROS, ICRA <br />Journals: IEEE TPAMI, IEEE RAL
-            </li>
-            <li></li>
-          </ul>
-        </div>
+         <div id="Positions" class="main-news">
+          <div class="title lang-en">Academic Positions</div>
+          <div class="title lang-cn">学术任职</div>
+          
+          <div class="edu-item lang-en">
+            <h4>
+              Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)
+              <span class="location">— Abu Dhabi, UAE</span>
+            </h4>
+            <p>Postdoctoral Researcher, working with Prof. Xiaodan Liang and Prof. Ivan Laptev and Prof. Ian Reid
+              <span class="duration">Aug 2024 – Present</span>
+            </p>
+          </div>
+          
+          <div class="edu-item lang-cn">
+            <h4>
+              阿布扎比穆罕默德·本·扎耶德人工智能大学（MBZUAI）
+              <span class="location">— 阿布扎比，阿联酋</span>
+            </h4>
+            <p>博士后研究员，合作导师：梁小丹、Ivan Laptev、Ian Reid 教授
+              <span class="duration">2024年8月 – 至今</span>
+            </p>
+          </div>
+          
+          <div class="edu-item lang-en">
+            <h4>
+              Southern University of Science and Technology (SUSTech)
+              <span class="location">— Shenzhen, China</span>
+            </h4>
+            <p>Visiting Scholar, working with Prof. Feng Zheng 
+              <span class="duration">Nov 2024 – Present</span>
+            </p>
+          </div>
+          
+          <div class="edu-item lang-cn">
+            <h4>
+              南方科技大学（SUSTech）
+              <span class="location">— 深圳，中国</span>
+            </h4>
+            <p>访问学者，合作导师：郑锋教授 
+              <span class="duration">2024年11月 – 至今</span>
+            </p>
+          </div>
+          
+          <div class="edu-item lang-en pb">
+            <h4>
+              Institute of Automation, Chinese Academy of Sciences (CASIA)
+              <span class="location">— Beijing, China</span>
+            </h4>
+            <p>Assistant Professor in State Key Laboratory of Multimodal Artificial Intelligence Systems
+              <span class="duration">Jul 2024 – Mar 2025</span>
+            </p>
+          </div>
+          
+          <div class="edu-item lang-cn pb">
+            <h4>
+              中国科学院自动化研究所（CASIA）
+              <span class="location">— 北京，中国</span>
+            </h4>
+            <p>助理研究员（多模态人工智能系统重点实验室） 
+              <span class="duration">2024年7月 – 2025年3月</span>
+            </p>
+          </div>
+          
+         </div>
+      </div>
+      <div class="main-content">
+        <div id="opportunities" class="main-news">
+          <div class="title lang-en">Internship</div>
+          <div class="title lang-cn">实习经历</div>
+
+          <div class="edu-item lang-en">
+            <h4>
+              Beijing Academy of Artificial Intelligence (BAAI)/Galbot
+              <span class="location">— Beijing, China</span>
+            </h4>
+            <p>Research Intern in Embodied AI Center of BAAI, working with Prof. He Wang 
+              <span class="duration">Jun 2023 – Jun 2024</span>
+            </p>
+          </div>
+
+            <div class="edu-item lang-cn">
+              <h4>
+                北京智源人工智能研究院（BAAI）/ Galbot
+                <span class="location">— 北京，中国</span>
+              </h4>
+              <p>智源具身智能中心研究实习生，合作导师：何恺教授 
+                <span class="duration">2023年6月 – 2024年6月</span>
+              </p>
+            </div>
+
+            <div class="edu-item lang-en pb">
+              <h4>
+                Huazhong University of Science and Technology (HUST)
+                <span class="location">— Wuhan, China</span>
+              </h4>
+              <p>Research Intern in HUST, working with Prof. Xiang Bai 
+                <span class="duration">Jun 2018 – Sep 2018</span>
+              </p>
+            </div>
+
+            <div class="edu-item lang-cn pb">
+              <h4>
+                华中科技大学（HUST）
+                <span class="location">— 武汉，中国</span>
+              </h4>
+              <p>研究实习生，合作导师：白翔教授 
+                <span class="duration">2018年6月 – 2018年9月</span>
+              </p>
+            </div>
+         </div>
       </div>
       <div class="main-content border-none">
-        <div id="opportunities" class="main-news">
-          <div class="title">OPPORTUNITIES</div>
-          <p>
-            We are actively looking for interns,full-time employees, master/PhD
-            students, and postdocs. Feel free to contact me if you are
-            interested in my research or potential collaborations.
-          </p>
-          <ul>
-            <li>
-              For graduate school applicants, we have two openings for PhD
-              students (in addition to master/PhD openings for foreigners) each
-              year, and please contact me at least one year prior to the
-              application deadline.
-            </li>
-            <li>
-              For visiting students or research interns, we welcome undergradute
-              and graduate students from top universities all world wide to
-              apply for >6 months research internship. Our interns have
-              published many top-tier conference/journal papers and have been
-              admitted to PhD/MS programs in Stanford, CMU, UCLA, UCSD, etc.
-            </li>
-            <li>
-              In Embodied AI center of
-              <a href="https://www.baai.ac.cn/">BAAI</a> and our Embodied AI
-              startup, <a href="https://www.galbot.com">Galbot</a>, we also
-              actively hire full-time research scientists, engineers and
-              interns. Email me if you are interested.
-            </li>
-            <li></li>
+        <div id="professional" class="main-news">
+          <div class="title lang-en">PROFESSIONAL SERVICE</div>
+          <div class="title lang-cn">学术服务</div>
+          <ul class="lang-en">
+            <li><b>Reviewer</b>: IEEE TPAMI, TIP, TNNLS, TMM, TCSVT, TII, IET Image Processing, CVPR, ICCV, NeurIPS, AAAI, MICCAI, ICRA</li>
+            <li><b>Session Chair</b>: 2nd International Conference on Computer Technology and Information Science (CTIS 2024)</li>
+            <li><b>Member</b>: IEEE, China Society of Image and Graphics (CSIG), Chinese Society for Stereology (CSS)</li>
+            <li><b>Organizer</b>: CVPR 2025 Embodied AI Workshop</li>
           </ul>
+          <ul class="lang-cn">
+            <li><b>审稿人</b>：IEEE TPAMI、TIP、TNNLS、TMM、TCSVT、TII，IET Image Processing，CVPR、ICCV、NeurIPS、AAAI、MICCAI、ICRA</li>
+            <li><b>分会主席</b>：第二届计算机技术与信息科学国际会议（CTIS 2024）</li>
+            <li><b>成员</b>：IEEE 电气与电子工程师协会、中国图象图形学学会（CSIG）、中国体视学学会（CSS）</li>
+            <li><b>组织者</b>：CVPR 2025 Embodied AI Workshop</li>
+          </ul>
+          
         </div>
       </div>
       <div class="modal">
@@ -825,6 +1146,9 @@
           <div class="modal-content-item" id="link6">
             <a href="#opportunities">Opportunities</a>
           </div>
+          <!-- <div class="modal-content-item" id="link7">
+            <a href="#opportunities">Opportunities</a>
+          </div> -->
         </div>
         <div class="modal-footer">
           <div class="modal-footer-item footer-item-active">
@@ -862,12 +1186,14 @@
         .getElementById('link2')
         .addEventListener('click', function (event) {
           event.preventDefault(); // 阻止默认锚点跳转行为
-          const targetElement = document.getElementById('publications');
+     
+            const targetElement = document.getElementById('publications');
+          
+         
           const offset = 70; // 位移量
           const targetPosition =
             targetElement.getBoundingClientRect().top + window.pageYOffset;
           const offsetPosition = targetPosition - offset;
-
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth',
@@ -908,9 +1234,16 @@
         .addEventListener('click', function (event) {
           event.preventDefault(); // 阻止默认锚点跳转行为
           const targetElement = document.getElementById('professional');
+          const targetElement2 = document.getElementById('professional2');
           const offset = 70; // 位移量
-          const targetPosition =
+          if((localStorage.getItem('lang') || 'en') === 'cn'){
+            const targetPosition =
+            targetElement2.getBoundingClientRect().top + window.pageYOffset;
+          }
+          else{
+            const targetPosition =
             targetElement.getBoundingClientRect().top + window.pageYOffset;
+          }
           const offsetPosition = targetPosition - offset;
 
           window.scrollTo({
@@ -1080,7 +1413,34 @@
         }
       }
      
-       
+      function switchLang(lang) {      
+          const cnEls = document.querySelectorAll('.lang-cn');      
+          const enEls = document.querySelectorAll('.lang-en');      
+          const btnEn = document.getElementById('btn-en');      
+          const btnCn = document.getElementById('btn-cn');
+          const info1 = document.getElementById('userinfo1')
+          const info2 = document.getElementById('userinfo2')
+          if (lang === 'cn') {        
+            cnEls.forEach(el => el.style.display = 'block');        
+            enEls.forEach(el => el.style.display = 'none');        
+            btnEn.classList.remove('active-lang');        
+            btnCn.classList.add('active-lang');    
+            info1.style.display = 'none'  
+            info2.style.display = 'flex'
+            } else {        
+            cnEls.forEach(el => el.style.display = 'none');        
+            enEls.forEach(el => el.style.display = 'block');        
+            btnEn.classList.add('active-lang');        
+            btnCn.classList.remove('active-lang');   
+            info1.style.display = 'flex'  
+            info2.style.display = 'none'   
+            }      
+           localStorage.setItem('lang', lang);    
+        }
+            window.addEventListener('DOMContentLoaded', () => {      
+              const savedLang = localStorage.getItem('lang') || 'en';      
+              switchLang(savedLang);    
+            });
      
       // document.addEventListener('DOMContentLoaded', function () {
       //   const myvideo = document.querySelector('video[src="./assets/robopanotes.mp4"]');

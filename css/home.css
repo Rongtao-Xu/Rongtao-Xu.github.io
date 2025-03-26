@@ -287,6 +287,13 @@ pre {
   line-height: 23px;
   font-weight: 400;
 }
+.main-userinfo .info .info-right .contact-links {
+  margin-left: -6px;
+}
+.main-userinfo .info .info-right .contact-links a {
+  font-family: Verdana;
+  font-size: 13px;
+}
 .main-userinfo .info .info-right p {
   font-family: Verdana;
   font-size: 15px;
@@ -350,6 +357,40 @@ pre {
   margin-top: 18px;
   padding-bottom: 50px;
   box-sizing: border-box;
+}
+ol {
+  padding-left: 20px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+ol li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.edu-item {
+  margin-top: 20px;
+}
+.main-news .edu-item ul{
+  padding-bottom: 0px;
+}
+.main-news .edu-item.pb {
+  padding-bottom: 50px;
+}
+
+
+.edu-item h4 {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.edu-item .location {
+  float: right;
+  font-style: italic;
+  color: #666;
+}
+.edu-item .duration {
+  float: right;
+  color: #999;
 }
 .main-news ul li {
   position: relative;
@@ -877,4 +918,23 @@ pre p {
     text-align: left;
     width: 100%;
   }
+}
+.contact-links {
+  margin-top: 12px;
+  text-align: left;
+  font-size: 10px!important;
+  font-weight: 500;
+  color: #444;
+}
+
+.contact-links a {
+  color: #49bf9d!important;
+  margin: 0 6px;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: #2ea388!important; /* 略深一点，hover 效果 */
+  text-decoration: underline;
 }
