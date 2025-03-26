@@ -402,6 +402,11 @@ pre {
   height: 145px;
   margin-right: 24px;
 }
+.main-selected .selected-item video {
+  width: 216px;
+  height: 145px;
+  margin-right: 24px;
+}
 .main-selected .selected-item .item-right {
   flex: 1;
   position: relative;
