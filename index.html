@@ -47,6 +47,46 @@
         font-weight: bold;
       }
     </style>
+    <style>
+      .lang-cn { display: none; }
+      .lang-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+      }
+      /* .lang-toggle button {
+        margin: 0 4px;
+        padding: 4px 8px;
+        cursor: pointer;
+      }
+      .active-lang {
+        font-weight: bold;
+        color: #49bf9d;
+        border-bottom: 1px solid #49bf9d;
+      } */
+      .lang-toggle button {
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        background-color: white;
+        color: #333;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .lang-toggle button:hover {
+        background-color: #f0f0f0;
+      }
+
+      .lang-toggle .active-lang {
+        border: 1px solid #49bf9d;
+        color: #49bf9d;
+        background-color: #e6f7f3;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <div class="lang-toggle">

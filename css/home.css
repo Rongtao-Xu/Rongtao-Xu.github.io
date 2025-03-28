@@ -294,6 +294,13 @@ pre {
   font-family: Verdana;
   font-size: 13px;
 }
+.main-userinfo .info .info-right .contact-links {
+  margin-left: -6px;
+}
+.main-userinfo .info .info-right .contact-links a {
+  font-family: Verdana;
+  font-size: 13px;
+}
 .main-userinfo .info .info-right p {
   font-family: Verdana;
   font-size: 15px;
