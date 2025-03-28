@@ -264,13 +264,15 @@ pre {
   display: flex;
 }
 .main-userinfo .info img {
-  width: 167px;
-  height: 167px;
+  width: 220px;
+  height: 220px;
   margin-right: 28px;
+  border-radius: 12px;
 }
 .main-userinfo .info .info-right {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .main-userinfo .info .info-right .info-title {
   opacity: 0.9;
