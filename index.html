@@ -290,50 +290,30 @@
             <div class="slide-source">
               <a href="https://pku-epic.github.io/ASGrasp/">
                 <video id="video1" autoplay loop muted>
-                  <source
-                    src="https://oss-cn-beijing.galbot.com/online/blog/tech6-1.mp4"
-                    type="video/mp4"
-                  />
+                  <source src="./assets/demo3.mp4" type="video/mp4" />
                 </video>
-                <div id="p1">
-                  Material-agnostic generalized grasping technology, capable of
-                  handling scenes with completely transparent objects with high
-                  success.
-                </div>
               </a>
             </div>
             <div class="slide-source">
               <a href="  https://pku-epic.github.io/DexGraspNet/">
                 <video id="video2" autoplay loop muted>
-                  <source
-                    src="https://oss-cn-beijing.galbot.com/online/blog/tech7-1.mp4"
-                    type="video/mp4"
-                  />
+                  <source src="./assets/demo2.mp4" type="video/mp4" />
                 </video>
-                <div id="p2">
-                  《DexGraspNet》ICRA 2023 Best Manipulation Paper
-                  Nominee，Million-level dexterous hands Dataset.
-                </div>
               </a>
             </div>
             <script>
+              
               var video = document.getElementById('video2');
+              // const video1 = document.getElementById('video1');
               var container = document.getElementById('p2');
               container.style.width = video.clientWidth - 56 + 'px';
+           
             </script>
             <div class="slide-source">
               <a href="https://pku-epic.github.io/Open6DOR/">
                 <video id="video3" autoplay loop muted>
-                  <source
-                    src="https://oss-cn-beijing.galbot.com/online/blog/tech2-1.mp4"
-                    type="video/mp4"
-                  />
+                  <source src="./assets/A0.mp4" type="video/mp4" />
                 </video>
-                <div id="p3">
-                  The world's first open command large model system for object
-                  pick-and-place, capable of controlling object orientation:
-                  Open6DOR.
-                </div>
               </a>
             </div>
             <script>
@@ -344,15 +324,8 @@
             <div class="slide-source">
               <a href="https://pku-epic.github.io/NaVid/">
                 <video autoplay muted loop>
-                  <source
-                    src="https://oss-cn-beijing.galbot.com/online/blog/tech3-1.mp4"
-                    type="video/mp4"
-                  />
+                  <source src="./assets/Navid.mp4" type="video/mp4" />
                 </video>
-                <div>
-                  The world's first generalized embodied navigation large model:
-                  NaVid.
-                </div>
               </a>
             </div>
           </div>
@@ -1719,6 +1692,29 @@
       //     });
       //   }
       // });
+      window.addEventListener('DOMContentLoaded', () => {
+        const video1 = document.getElementById('video1');
+
+        // 监听是否可以播放
+        video1.addEventListener('canplay', () => {
+          video1.play(); // 确保开始播放
+          video1.playbackRate = 2.0; // 设置倍速
+        });
+        const video2 = document.getElementById('video2');
+
+        // 监听是否可以播放
+        video2.addEventListener('canplay', () => {
+          video2.play(); // 确保开始播放
+          video2.playbackRate = 2.0; // 设置倍速
+        });
+        const video3 = document.getElementById('video3');
+
+        // 监听是否可以播放
+        video3.addEventListener('canplay', () => {
+          video3.play(); // 确保开始播放
+          video3.playbackRate = 2.0; // 设置倍速
+        });
+      });
 
     </script>
   </body>
