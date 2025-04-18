@@ -466,7 +466,14 @@ ol li {
   flex-direction: column;
   height: 145px;
 }
-.main-selected .selected-item .item-title {
+.main-selected .selected-item .item-title{
+  font-family: Helvetica-Bold;
+  font-size: 16px;
+  color: #1e824c;
+  line-height: 20px;
+  font-weight: 700;
+}
+.main-selected .selected-item .item-title a{
   font-family: Helvetica-Bold;
   font-size: 16px;
   color: #1e824c;
@@ -977,4 +984,46 @@ pre p {
   display: list-item;
   padding-left: 1.2rem; /* 与li缩进对齐，微调也可用1em/1.5em */
   margin-left: -2.75rem; /* 负缩进拉回来 */
+}
+.edu-entry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2em;
+}
+
+.edu-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.edu-info {
+  flex: 1;
+}
+
+.edu-school {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.edu-title {
+  font-size: 0.95rem;
+  margin: 3px 0;
+}
+
+.edu-sub {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.edu-desc {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+#teaching{
+  padding-bottom: 30px;
 }
