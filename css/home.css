@@ -48,7 +48,9 @@ pre {
   position: relative;
   height: 320px;
   overflow-y: hidden;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
+  overflow-x: auto;
+
   padding-bottom: 0;
 }
 .main-swiper .swiper-content {
@@ -56,7 +58,7 @@ pre {
   position: relative;
   top: 0;
   left: 0;
-  width: 1810px;
+  width: max-content;
 }
 .main-swiper .swiper-content-phone {
   display: none;
