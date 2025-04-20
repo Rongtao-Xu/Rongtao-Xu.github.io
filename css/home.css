@@ -17,8 +17,9 @@
   background-color: #fff;
 }
 :root {
-  /* --main-text-color: #38393c; */
-  --main-text-color:#2D3436;
+  --main-text-color: #38393c;
+  /* --main-text-color:#2D3436; */
+  /* --main-text-color:#3E2723; */
 }
 
 * {
@@ -27,8 +28,9 @@
 }
 html,
 body {
-  /* background: #f7f7f7; */
-  background:#E0ECE4;
+  background: #f7f7f7;
+  /* background:#E0ECE4; */
+  /* background:#000; */
 
 }
 a {
