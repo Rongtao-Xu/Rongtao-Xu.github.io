@@ -16,13 +16,20 @@
   height: 0;
   background-color: #fff;
 }
+:root {
+  /* --main-text-color: #38393c; */
+  --main-text-color:#2D3436;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 html,
 body {
-  background: #f7f7f7;
+  /* background: #f7f7f7; */
+  background:#E0ECE4;
+
 }
 a {
   font-family: Verdana;
@@ -37,7 +44,7 @@ a:hover {
 i {
   font-family: Verdana-Bold;
   font-size: 13px;
-  color: #38393c;
+  color: var(--main-text-color);
   line-height: 24px;
   font-weight: 700;
 }
@@ -46,7 +53,7 @@ pre {
 }
 .main-swiper {
   position: relative;
-  height: 320px;
+  height: 365px;
   overflow-y: hidden;
   /* overflow-x: scroll; */
   overflow-x: auto;
@@ -84,10 +91,10 @@ pre {
   opacity: 0.8;
   font-family: Verdana;
   font-size: 12px;
-  color: #38393c;
+  color: var(--main-text-color);
   font-weight: 400;
   text-align: left;
-  width: 335px;
+  width: 390px;
   height: auto;
   box-sizing: border-box;
   overflow-wrap: break-word;
@@ -267,8 +274,8 @@ pre {
   display: flex;
 }
 .main-userinfo .info img {
-  width: 192px;
-  height: 269px;
+  width: 210px;
+  height: 220px;
   margin-right: 28px;
   border-radius: 12px;
 }
@@ -343,7 +350,7 @@ pre {
 .main-userinfo .decs p {
   font-family: Verdana;
   font-size: 13px;
-  color: #38393c;
+  color: var(--main-text-color);
   line-height: 24px;
   font-weight: 400;
   /* margin-bottom: 16px; */
@@ -410,14 +417,14 @@ ol li {
   font-family: Verdana;
   list-style-type: none;
   font-size: 13px;
-  color: #38393c;
+  color: var(--main-text-color);
   line-height: 25px;
   font-weight: 400;
 }
 .main-news p {
   font-family: Verdana;
   font-size: 13px;
-  color: #38393c;
+  color: var(--main-text-color);
   line-height: 23px;
   font-weight: 400;
   margin-top: 18px;
@@ -429,7 +436,7 @@ ol li {
   top: 10px;
   width: 5px;
   height: 5px;
-  background-color: #38393c;
+  background-color: var(--main-text-color);
   border-radius: 40px;
 }
 .main-news ul li:last-child:before {
@@ -438,7 +445,7 @@ ol li {
 .main-news ul li span {
   font-family: Verdana-Bold;
   font-size: 13px;
-  color: #38393c;
+  color: var(--main-text-color);
   line-height: 25px;
   font-weight: 700;
 }
@@ -485,7 +492,7 @@ ol li {
 .main-selected .selected-item .decs {
   font-family: Verdana;
   font-size: 11px;
-  color: #38393c;
+  color: var(--main-text-color);
   font-weight: 400;
   margin-bottom: 14px;
 }
@@ -493,7 +500,7 @@ ol li {
   opacity: 0.8;
   font-family: Verdana;
   font-size: 11px;
-  color: #38393c;
+  color: var(--main-text-color);
   font-weight: 400;
   margin-top: 8px;
 }
@@ -505,7 +512,7 @@ ol li {
   opacity: 0.8;
   font-family: Verdana;
   font-size: 11px;
-  color: #38393c;
+  color: var(--main-text-color);
   line-height: 13px;
   font-weight: 400;
 }
@@ -513,7 +520,7 @@ ol li {
   opacity: 1;
   font-family: Verdana-Bold;
   font-size: 11px;
-  color: #38393c;
+  color: var(--main-text-color);
   line-height: 13px;
   font-weight: 700;
 }
@@ -904,7 +911,7 @@ pre p {
     opacity: 0.8;
     font-family: Verdana;
     font-size: 0.12rem;
-    color: #38393c;
+    color: var(--main-text-color);
     font-weight: 400;
     text-align: left;
     width: 2.62rem;
@@ -914,7 +921,7 @@ pre p {
     margin-top: 0.14rem;
   }
   .main-swiper .swiper-content-phone .slide-source div span {
-    color: #38393c;
+    color: var(--main-text-color);
     font-weight: 300;
   }
   .main-swiper .swiper-content-phone .slide-source div .project {
