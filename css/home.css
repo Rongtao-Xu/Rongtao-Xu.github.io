@@ -990,6 +990,14 @@ pre p {
   text-decoration: underline;
 }
 
+.decs a{
+  color: #49bf9d!important;
+}
+.decs a:hover {
+  color: #2ea388!important; /* 略深一点，hover 效果 */
+  text-decoration: underline;
+}
+
 .main-news summary {
   /* list-style-position: outside; */
   display: list-item;
