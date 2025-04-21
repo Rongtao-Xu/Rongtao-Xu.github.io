@@ -371,7 +371,7 @@ pre {
   box-sizing: border-box;
 }
 .main-news {
-  max-width: 940px;
+  max-width: 960px;
   margin: 49px auto 0;
 }
 .main-news ul {
@@ -531,6 +531,26 @@ ol li {
   bottom: 0;
   left: 0;
 }
+.main-selected .selected-item .bt2 {
+  position: absolute;
+  bottom: 65px;
+  right: 50px;
+}
+.main-selected .selected-item .bt3 {
+  position: absolute;
+  bottom: -30px;
+  right: 50px;
+}
+.main-selected .selected-item .bt4 {
+  position: absolute;
+  bottom: 90px;
+  right: 75px;
+}
+.main-selected .selected-item .bt5 {
+  position: absolute;
+  bottom: 0px;
+  right: 75px;
+}
 /* .main-selected .selected-item .button a {
   display: inline-block;
   padding: 0 9px;
@@ -565,8 +585,85 @@ ol li {
   margin-right: 8px;
   box-sizing: border-box;
 }
+.main-selected .selected-item .bt2 a {
+  display: inline-block;
+  padding: 0 9px;
+  height: 26px;
+  line-height: 26px;
+  font-family: Verdana;
+  font-size: 11px;
+  color: #1e824c;  /* 主文本色：深绿 */
+  font-weight: 400;
+  background: #ffffffb3;  /* 半透明白色背景 */
+  border: 0.5px solid rgba(30, 130, 76, 1);  /* 深绿色边框 */
+  border-radius: 2px;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+
+.main-selected .selected-item .bt3 a {
+  display: inline-block;
+  padding: 0 9px;
+  height: 26px;
+  line-height: 26px;
+  font-family: Verdana;
+  font-size: 11px;
+  color: #1e824c;  /* 主文本色：深绿 */
+  font-weight: 400;
+  background: #ffffffb3;  /* 半透明白色背景 */
+  border: 0.5px solid rgba(30, 130, 76, 1);  /* 深绿色边框 */
+  border-radius: 2px;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+.main-selected .selected-item .bt4 a {
+  display: inline-block;
+  padding: 0 9px;
+  height: 26px;
+  line-height: 26px;
+  font-family: Verdana;
+  font-size: 11px;
+  color: #1e824c;  /* 主文本色：深绿 */
+  font-weight: 400;
+  background: #ffffffb3;  /* 半透明白色背景 */
+  border: 0.5px solid rgba(30, 130, 76, 1);  /* 深绿色边框 */
+  border-radius: 2px;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+.main-selected .selected-item .bt5 a {
+  display: inline-block;
+  padding: 0 9px;
+  height: 26px;
+  line-height: 26px;
+  font-family: Verdana;
+  font-size: 11px;
+  color: #1e824c;  /* 主文本色：深绿 */
+  font-weight: 400;
+  background: #ffffffb3;  /* 半透明白色背景 */
+  border: 0.5px solid rgba(30, 130, 76, 1);  /* 深绿色边框 */
+  border-radius: 2px;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
 
 .main-selected .selected-item .button a:hover {
+  background: #c9f7df;  /* hover 状态淡绿背景 */
+  text-decoration: none;
+}
+.main-selected .selected-item .bt2 a:hover {
+  background: #c9f7df;  /* hover 状态淡绿背景 */
+  text-decoration: none;
+}
+.main-selected .selected-item .bt3 a:hover {
+  background: #c9f7df;  /* hover 状态淡绿背景 */
+  text-decoration: none;
+}
+.main-selected .selected-item .bt4 a:hover {
+  background: #c9f7df;  /* hover 状态淡绿背景 */
+  text-decoration: none;
+}
+.main-selected .selected-item .bt5 a:hover {
   background: #c9f7df;  /* hover 状态淡绿背景 */
   text-decoration: none;
 }
