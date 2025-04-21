@@ -1684,14 +1684,16 @@
           const btnCn = document.getElementById('btn-cn');
           const info1 = document.getElementById('userinfo1')
           const info2 = document.getElementById('userinfo2')
-          if (lang === 'cn') {        
+          if (lang === 'cn') {     
+            document.title = '许镕涛';   
             cnEls.forEach(el => el.style.display = 'block');        
             enEls.forEach(el => el.style.display = 'none');        
             btnEn.classList.remove('active-lang');        
             btnCn.classList.add('active-lang');    
             info1.style.display = 'none'  
             info2.style.display = 'flex'
-            } else {        
+            } else {       
+            document.title = 'Rongtao Xu'; 
             cnEls.forEach(el => el.style.display = 'none');        
             enEls.forEach(el => el.style.display = 'block');        
             btnEn.classList.add('active-lang');        
