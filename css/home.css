@@ -1246,8 +1246,27 @@ pre p {
   }
   .lang-toggle{
     position: fixed;
-    top: -0.75rem;
+    display: flex;
+    top: 0.25rem;
     right: 0.55rem;
     z-index: 999;
+    height: 0.3rem;
+    /* background-color: red; */
+  }
+  .lang-toggle button {
+    width: 0.8rem;
+    height: 0.3rem;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+    font-size: 0.14rem;
+    line-height: 0.3rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0.1rem;
+    transition: all 0.2s ease;
+    /* position: absolute; */
+
   }
 }
