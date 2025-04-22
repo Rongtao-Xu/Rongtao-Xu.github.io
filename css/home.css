@@ -753,6 +753,37 @@ pre p {
 #teaching{
   padding-bottom: 30px;
 }
+.lang-cn { display: none; }
+      .lang-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+      }
+      .lang-toggle button {
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        background-color: white;
+        color: #333;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .lang-toggle button:hover {
+        background-color: #f0f0f0;
+      }
+
+      .lang-toggle .active-lang {
+        border: 1px solid #49bf9d;
+        color: #49bf9d;
+        background-color: #e6f7f3;
+        font-weight: bold;
+      }
+      .demo{
+        color:#1e824c !important;
+      }
 @media (max-width: 769px) {
   a {
     font-size: 0.13rem;
@@ -1212,5 +1243,11 @@ pre p {
   .main-selected .selected-item .bt5 {
     bottom: 0.1rem;
     right: 2.6rem;
+  }
+  .lang-toggle{
+    position: fixed;
+    top: -0.75rem;
+    right: 0.55rem;
+    z-index: 999;
   }
 }
