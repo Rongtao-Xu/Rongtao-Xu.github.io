@@ -677,6 +677,82 @@ ol li {
 pre p {
   font-size: 12px;
 }
+.contact-links {
+  margin-top: 12px;
+  text-align: left;
+  font-size: 10px!important;
+  font-weight: 500;
+  color: #444;
+}
+
+.contact-links a {
+  color: #49bf9d!important;
+  margin: 0 6px;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: #2ea388!important; /* 略深一点，hover 效果 */
+  text-decoration: underline;
+}
+
+.decs a{
+  color: #49bf9d!important;
+}
+.decs a:hover {
+  color: #2ea388!important; /* 略深一点，hover 效果 */
+  text-decoration: underline;
+}
+
+.main-news summary {
+  /* list-style-position: outside; */
+  display: list-item;
+  padding-left: 1.2rem; /* 与li缩进对齐，微调也可用1em/1.5em */
+  margin-left: -2.75rem; /* 负缩进拉回来 */
+}
+.edu-entry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2em;
+}
+
+.edu-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.edu-info {
+  flex: 1;
+}
+
+.edu-school {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.edu-title {
+  font-size: 0.95rem;
+  margin: 3px 0;
+}
+
+.edu-sub {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.edu-desc {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+#teaching{
+  padding-bottom: 30px;
+}
 @media (max-width: 769px) {
   a {
     font-size: 0.13rem;
@@ -818,6 +894,11 @@ pre p {
     padding-bottom: 0.35rem;
   }
   .main-selected .selected-item img {
+    width: 1.23rem;
+    height: 0.75rem;
+    margin-right: 0.14rem;
+  }
+  .main-selected .selected-item video {
     width: 1.23rem;
     height: 0.75rem;
     margin-right: 0.14rem;
@@ -1066,80 +1147,64 @@ pre p {
     text-align: left;
     width: 100%;
   }
-}
-.contact-links {
-  margin-top: 12px;
-  text-align: left;
-  font-size: 10px!important;
-  font-weight: 500;
-  color: #444;
-}
+  .main-news summary {
+    margin-left: -1.3rem; /* 负缩进拉回来 */
+  }
+  .edu-item {
+    margin-top: 0.2rem;
+  }
 
-.contact-links a {
-  color: #49bf9d!important;
-  margin: 0 6px;
-  text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
-}
+  .edu-entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0rem;
+  }
 
-.contact-links a:hover {
-  color: #2ea388!important; /* 略深一点，hover 效果 */
-  text-decoration: underline;
-}
+  .edu-logo {
+    width: 0.6rem !important;
+    height: auto;
+    flex-shrink: 0;
+  }
 
-.decs a{
-  color: #49bf9d!important;
-}
-.decs a:hover {
-  color: #2ea388!important; /* 略深一点，hover 效果 */
-  text-decoration: underline;
-}
+  .edu-info {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, sans-serif;
+    font-size: 0.13rem;
+    line-height: 0.22rem;
+    color: #333;
+  }
 
-.main-news summary {
-  /* list-style-position: outside; */
-  display: list-item;
-  padding-left: 1.2rem; /* 与li缩进对齐，微调也可用1em/1.5em */
-  margin-left: -2.75rem; /* 负缩进拉回来 */
-}
-.edu-entry {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.2em;
-}
+  .edu-info .edu-school {
+    font-weight: bold;
+    font-size: 0.15rem;
+    margin-bottom: 0.04rem;
+  }
 
-.edu-logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 16px;
-  border-radius: 50%;
-  object-fit: contain;
-}
+  .edu-info .edu-title {
+    font-size: 0.13rem;
+    color: #666;
+    margin-bottom: 0.02rem;
+  }
 
-.edu-info {
-  flex: 1;
-}
-
-.edu-school {
-  font-size: 1.05rem;
-  font-weight: bold;
-}
-
-.edu-title {
-  font-size: 0.95rem;
-  margin: 3px 0;
-}
-
-.edu-sub {
-  font-size: 0.85rem;
-  color: #777;
-  margin-bottom: 4px;
-}
-
-.edu-desc {
-  font-size: 0.85rem;
-  color: #444;
-}
-
-#teaching{
-  padding-bottom: 30px;
+  .edu-info .edu-desc {
+    font-size: 0.13rem;
+    color: #444;
+  }
+  .main-selected .selected-item .bt2{
+    bottom: 1.45rem;
+    right: 2.6rem;
+  }
+  .main-selected .selected-item .bt3 {
+    bottom: 0.1rem;
+    right: 2.6rem;
+  }
+  .main-selected .selected-item .bt4 {
+    bottom: 1.45rem;
+    right: 2.6rem;
+  }
+  .main-selected .selected-item .bt5 {
+    bottom: 0.1rem;
+    right: 2.6rem;
+  }
 }
