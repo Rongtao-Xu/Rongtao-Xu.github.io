@@ -1127,6 +1127,12 @@ pre p {
     border-radius: 0.05rem;
     background: none;
   }
+  .main-swiper .swiper-content-phone .slide-source img {
+    width: 2.62rem;
+    height: 1.8rem;
+    border-radius: 0.05rem;
+    background: none;
+  }
   ::-webkit-scrollbar {
     width: 0px;
     height: 0px;
